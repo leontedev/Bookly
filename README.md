@@ -83,5 +83,13 @@ And call .dismiss()
 presentationMode.wrappedValue.dismiss() 
 ```
 
+## Day 75 - Accessibility improvements
+Improving the RatingView's accessiblity:
+
+```Swift
+.accessibility(label: Text("\(number == 1 ? "1 star" : "\(number) stars")"))
+.accessibility(removeTraits: .isImage)
+.accessibility(addTraits: number > self.rating ? .isButton : [.isButton, .isSelected]) 
+```
 
 
